@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL - Apa itu SSL/TLS?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .nav-links .tips {
+            color: #0087e0;
+        }
+
+        .breadcrumb {
+            padding: 1rem 5%;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .main-content {
+            padding: 2rem 5%;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .content-left {
+            flex: 1;
+            text-align: left;
+            padding: 2rem;
+        }
+
+        .content-right {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .content-right img {
+            max-width: 20px; /* Ganti sesuai ukuran yang diinginkan */
+            height: auto;
+        }
+
+
+        .main-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .meta-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .meta-info div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .description {
+            margin-top: 2rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23fff' d='M0,96L80,112C160,128,320,160,480,160C640,160,800,128,960,112C1120,96,1280,96,1360,96L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        
+        
+        <ul class="nav-links">
+            <li><a href="#">layanan</a></li>
+            <li><a href="#">tentang ssl/tsl</a></li>
+            <li><a href="#">portofolio</a></li>
+            <li><a href="#">industri</a></li>
+            <li><a href="#" class="tips">tips</a></li>
+            <li><a href="#">kontak</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-left">
+            <h1>Apa itu SSL/TLS?</h1>
+            <div class="meta-info">
+                <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    3 MIN
+                </div>
+                <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                    </svg>
+                    TUTORIAL WEB
+                </div>
+                <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    NSY'S ADMIN
+                </div>
+            </div>
+            <div class="description">
+                SSL/TLS adalah protokol keamanan yang mengenkripsi komunikasi antara browser dan server web. 
+                Ini memastikan data yang dikirim tetap aman dan private.
+            </div>
+        </div>
+        <div class="content-right">
+            <img src="Secure data-amico.png" alt="SSL/TLS Illustration">
+            
+        </div>
+    </main>
+
+    <div class="wave"></div>
+</body>
+</html>
